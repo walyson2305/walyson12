@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluraflix - Estilo HBO Max</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aluraflix</h1>
+    </header>
+
+    <section class="video-section">
+        <h2>Filmes de Heróis Populares</h2>
+        <div class="video-slider">
+            <div class="video-card" onclick="abrirDetalhes('Vingadores: Ultimato', 'https://www.youtube.com/embed/010zK4vO-QE')">
+                <img src="https://via.placeholder.com/300x450?text=Vingadores+Ultimato" alt="Vingadores: Ultimato">
+                <h3 class="video-title">Vingadores: Ultimato</h3>
+            </div>
+            <div class="video-card" onclick="abrirDetalhes('Homem de Ferro', 'https://www.youtube.com/embed/-_gcqaOz1do')">
+                <img src="https://via.placeholder.com/300x450?text=Homem+de+Ferro" alt="Homem de Ferro">
+                <h3 class="video-title">Homem de Ferro</h3>
+            </div>
+            <div class="video-card" onclick="abrirDetalhes('Mulher-Maravilha', 'https://www.youtube.com/embed/c85ldg3BVgY')">
+                <img src="https://via.placeholder.com/300x450?text=Mulher-Maravilha" alt="Mulher-Maravilha">
+                <h3 class="video-title">Mulher-Maravilha</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>Filmes Recentes de Heróis</h2>
+        <div class="video-slider">
+            <div class="video-card" onclick="abrirDetalhes('Shang-Chi e a Lenda dos Dez Anéis', 'https://www.youtube.com/embed/AfHiUtxrmiY')">
+                <img src="https://via.placeholder.com/300x450?text=Shang-Chi" alt="Shang-Chi e a Lenda dos Dez Anéis">
+                <h3 class="video-title">Shang-Chi e a Lenda dos Dez Anéis</h3>
+            </div>
+            <div class="video-card" onclick="abrirDetalhes('Homem-Aranha: Sem Volta Para Casa', 'https://www.youtube.com/embed/ZcMj3DP1xmM')">
+                <img src="https://via.placeholder.com/300x450?text=Homem-Aranha" alt="Homem-Aranha: Sem Volta Para Casa">
+                <h3 class="video-title">Homem-Aranha: Sem Volta Para Casa</h3>
+            </div>
+            <div class="video-card" onclick="abrirDetalhes('Liga da Justiça de Zack Snyder', 'https://www.youtube.com/embed/BifA90UAQtg')">
+                <img src="https://via.placeholder.com/300x450?text=Liga+da+Justiça" alt="Liga da Justiça de Zack Snyder">
+                <h3 class="video-title">Liga da Justiça de Zack Snyder</h3>
+            </div>
+        </div>
+    </section>
+
+    <div id="detalhes-video" class="detalhes-video">
+        <div class="detalhes-conteudo">
+            <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            <h3 id="video-titulo"></h3>
+            <button class="assistir-agora">
+                Assistir agora &#9654;
+            </button>
+            <h4>Relacionados</h4>
+            <div class="relacionados">
+                <div class="relacionado-card">
+                    <img src="https://via.placeholder.com/100x150?text=Relacionado+1" alt="Relacionado 1">
+                    <p>Relacionado 1</p>
+                </div>
+                <div class="relacionado-card">
+                    <img src="https://via.placeholder.com/100x150?text=Relacionado+2" alt="Relacionado 2">
+                    <p>Relacionado 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirDetalhes(titulo, link) {
+            document.getElementById('video-titulo').textContent = titulo;
+            document.getElementById('video-frame').src = link;
+            document.getElementById('detalhes-video').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
